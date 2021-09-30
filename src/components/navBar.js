@@ -7,26 +7,23 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
 } from 'reactstrap';
 import Categorias from '../pages/categorias';
-
-
+import {Link} from 'react-router-dom';
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-
     return (
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">
-        FakeStore
+        <NavbarBrand>
+          <Link to="/">FakeStore</Link>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/productos">Listado de Productos</NavLink>
+              <Link to="/productos">Listado de Productos</Link>
             </NavItem>
             <Categorias/>
             <NavItem>

@@ -57,8 +57,8 @@ export default function ItemCount({onAdd, stock, items, initial, producto}){
             </div>
             <br/>
             <div>
-                {items>0&&<Button onClick={addItem} style={{marginLeft:'2%'}}>Terminar Compra</Button>}
-                {<ButtonToggle onClick={addItem} color='info' style={{marginLeft:'2%'}} active><Link to="/carrito">Ir al carrito</Link></ButtonToggle>}
+                {items>0&&<Button onClick={addItem} style={{marginLeft:'2%'}}><Link to="/carrito">Terminar Compra</Link></Button>}
+                {/* {<ButtonToggle onClick={addItem} color='info' style={{marginLeft:'2%'}} active><Link to="/carrito">Ir al carrito</Link></ButtonToggle>} */}
             </div>
 
             

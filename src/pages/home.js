@@ -16,7 +16,6 @@ export default function Home(){
             setProductos(data)
             console.log(data)
             setLoading(false)
-
         }catch(error){
             alert(error)
 

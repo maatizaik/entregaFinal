@@ -1,10 +1,9 @@
 import {useState, useEffect} from 'react';
 import {collection, getDocs} from 'firebase/firestore';
 import {getData} from '../firebase/index';
-
 import SpinnerComponent from '../components/spinner';
-
 import React from 'react';
+import {Link} from 'react-router-dom'
 import {
     Card, CardText, CardBody,
      CardSubtitle,Button, Container, Row, NavLink
@@ -52,7 +51,7 @@ export default function Productos(){
                             <h6 style={{fontSize:'1.1rem', textAlign:'center', justifyContent:'space-around'}}>{elemento.title}</h6>
                             <CardSubtitle tag="h7" className="mb-2 text-muted">Precio: {elemento.price}</CardSubtitle>
                             <CardText>Stock: {elemento.count}</CardText>
-                            <Button color='secondary' active><NavLink href={`/producto-detalle/${elemento.id}`}>Ver detalle del producto</NavLink></Button>
+                            <Button color='secondary' active><Link to={`/producto-detalle/${elemento.id}`}>Ver detalle del producto</Link></Button>
                             </CardBody>
                         </Card>
                     </div>
